@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const http = axios.create({
-  baseURL: "https://posting-activity.vercel.app",
+  baseURL: "https://routine-server.vercel.app",
 });
 
 http.interceptors.response.use(
