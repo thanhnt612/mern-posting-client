@@ -49,7 +49,7 @@ export default function Home() {
     },
   });
   return (
-    <div className="post bg-secondary bg-opacity-50 py-5">
+    <div className="post py-5">
       <iframe
         width="1920px"
         height="1080px"
@@ -60,7 +60,7 @@ export default function Home() {
         allowfullscreen
       ></iframe>
       <div className="container">
-        <div className="title text-center bg-light rounded-pill py-1">
+        <div className="title-page border border-3 border-primary text-center bg-light rounded-pill py-1">
           <h3 className="fw-bold fs-1 lh-2 text-primary">Routine</h3>
         </div>
         <div className="main pt-3">
@@ -68,7 +68,7 @@ export default function Home() {
             <div className="content d-flex flex-wrap col-9">
               {task.map((item, index) => {
                 return (
-                  <div className="col-4 p-2">
+                  <div className="card-item col-md-6 col-lg-4 p-2">
                     <div className="card rounded">
                       <img
                         className="rounded-top"
@@ -77,7 +77,7 @@ export default function Home() {
                       />
                       <div className="card-body row">
                         <div className="left col-6">
-                          <h5 className="fst-italic fw-semibold">
+                          <h5 className="fst-italic fw-semibold text-primary">
                             {item.title}
                           </h5>
                           <p className="fw-normal">{item.description}</p>
@@ -87,7 +87,6 @@ export default function Home() {
                             style={{
                               cursor: "pointer",
                               color: "red",
-                              fontSize: 25,
                             }}
                             onClick={() => {
                               //Increase Heart
@@ -140,26 +139,26 @@ export default function Home() {
               })}
             </div>
             <div className="create col-3 pt-2">
-              <div className="form-outline bg-light rounded p-3">
+              <div className="form-outline bg-info bg-opacity-75 rounded p-3 ">
                 <div className="create-posting">
                   <form onSubmit={handleSubmit}>
                     <input
                       id="title"
                       name="title"
-                      className="form-control my-3"
+                      className="form-control border title my-3"
                       placeholder="Title"
                       onChange={handleChange}
                     />
                     <input
                       id="description"
                       name="description"
-                      className="form-control my-3"
+                      className="form-control border description my-3"
                       placeholder="Description"
                       onChange={handleChange}
                     />
-                    <div className="text-center">
-                      <button type="submit" className="btn btn-success">
-                        Create a post
+                    <div className="button1 text-center">
+                      <button type="submit" className="btn">
+                        <span>Create a post</span>
                       </button>
                     </div>
                   </form>
