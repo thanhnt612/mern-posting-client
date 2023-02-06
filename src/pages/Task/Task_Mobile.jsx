@@ -50,15 +50,6 @@ export default function Home() {
   });
   return (
     <div className="post-mobile bg-secondary bg-opacity-50 py-5">
-      {/* <iframe
-        width="768px"
-        height="1366px"
-        src="https://www.youtube.com/embed/zCLOJ9j1k2Y?autoplay=1&mute=1"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe> */}
       <div className="container">
         <div className="title-page border border-3 border-primary text-center bg-light rounded-pill py-1">
           <h3 className="fw-bold fs-1 lh-2 text-primary">Routine</h3>
@@ -84,7 +75,7 @@ export default function Home() {
                       onChange={handleChange}
                     />
                     <div className="text-center">
-                      <button type="submit" className="btn btn-success">
+                      <button type="submit" className="btn btn-primary">
                         Create a post
                       </button>
                     </div>
@@ -166,9 +157,9 @@ export default function Home() {
               {task.map((item, index) => {
                 return (
                   <div className="card-item col-sm-6 col-lg-4 p-2">
-                    <div className="card border border-2 border-info">
+                    <div className="card">
                       <img
-                        className=""
+                        className="rounded-top"
                         src={`https://picsum.photos/300/200/?random=${index}`}
                         alt="..."
                       />

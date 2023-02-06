@@ -139,7 +139,7 @@ export default function Home() {
               })}
             </div>
             <div className="create col-3 pt-2">
-              <div className="form-outline bg-info bg-opacity-75 rounded p-3 ">
+              <div className="form-outline bg-primary rounded p-3 ">
                 <div className="create-posting">
                   <form onSubmit={handleSubmit}>
                     <input
